@@ -1,0 +1,52 @@
+﻿{
+  "userSecretsId": "aspnet5-TestDnxWeb-fa391cc1-a630-41b1-b94e-65c7f737e138",
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "AspNet.Security.OAuth.Validation": "1.0.0-alpha1-0036",
+    "EntityFramework.Commands": "7.0.0-rc2-16649",
+    "EntityFramework.MicrosoftSqlServer": "7.0.0-rc2-16649",
+    "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc2-16216",
+    "Microsoft.AspNet.Authentication.JwtBearer": "1.0.0-rc2-16216",
+    "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-rc2-16405",
+    "Microsoft.AspNet.Hosting": "1.0.0-rc2-16161",
+    "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc2-16304",
+    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc2-16069",
+    "Microsoft.AspNet.Mvc": "6.0.0-rc2-16770",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc2-16236",
+    "Microsoft.AspNet.StaticFiles": "1.0.0-rc2-16107",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-15952",
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc2-16096",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-15958",
+    "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-15958",
+    "Microsoft.Extensions.OptionsModel": "1.0.0-rc2-15914",
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc2-16226",
+    "OpenIddict.Core": "1.0.0-alpha2-0133",
+    "OpenIddict.EF": "1.0.0-alpha2-0133",
+    "System.IdentityModel.Tokens.Jwt": "5.0.0-rc2-301150021"
+  },
+
+  "commands": {
+    "web": "TestDnxWeb",
+    "ef": "EntityFramework.Commands"
+  },
+
+  "frameworks": {
+    "dnx46": { }
+  },
+
+  "exclude": [
+    "wwwroot",
+    "node_modules"
+  ],
+  "publishExclude": [
+    "**.user",
+    "**.vspscc"
+  ],
+  "scripts": {
+    "prepublish": [ "npm install", "bower install", "gulp clean", "gulp min" ]
+  }
+}
